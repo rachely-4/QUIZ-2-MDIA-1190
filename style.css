@@ -1,0 +1,278 @@
+:root {
+    --sans-serif: 'DM Sans', sans-serif;
+    --gap: 1rem;
+    --taupe: #6a645d;
+    ---blue: #104471;
+    --soft-grey: #f7f2f2;
+    --dark-grey: #252527;
+    --bold: 700;
+    --semi-bold: 600;
+}
+
+
+body {
+  /* Global font for body text */
+  font-family: var(--font-body);
+  
+  /* Improved readability */
+  line-height: 1.6;
+  
+  /* Light gray background */
+  background-color: #f2f2f2;
+  margin: 0;
+  padding: 0;
+}
+
+img {
+   /* Prevent images from overflowing */
+  max-width: 100%;
+}
+
+.container {
+  /* Max width of content */
+  max-width: 80rem;
+  
+  /* Center content horizontally */
+  margin: 0 auto;
+  
+  /* Horizontal padding */
+  padding: 0 1rem;
+}
+
+section {
+  
+  /* Reset default spacing */
+  margin: 0;
+}
+
+/* --- TYPOGRAPHY --- */
+
+h1, h2, h3, h4, h5, h6, p, li, a {line-height: 1.5;}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: var(--semi-bold);
+  font-family: var(--font-heading);}
+
+h1 { font-size: 2rem; }
+
+h2 { font-size: 1.875rem; }
+
+h3 { font-size: 1.5rem; }
+
+h4 { font-size: 1.3rem; }
+
+h5 { font-size: 1.125rem; }
+
+h6 { font-size: 1rem; }
+
+
+/* --- LAYOUT UTILITIES (FLEX / GRID) --- */
+.grid {
+  display: grid;
+
+  /* 12-column grid system */
+  grid-template-columns: repeat(12, 1fr);
+  
+  /* Dynamic gap between items */
+  gap: var(--gap);
+}
+
+.flex {
+  display: flex;
+  gap: var(--gap);
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background-color: var(---blue);
+  text-decoration: none;
+  color: white;
+  font-weight: var(--semi-bold);
+  transition: 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+
+
+
+/* --- HERO BANNER ---- */
+.home-banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 7 / 3;
+  background: #222 url('/images/phone-case-multiple.jpeg') no-repeat scroll center;
+  background-size: cover;
+  position: relative;
+  margin-top: 3.5rem; /* this scales the banner so the nav bar doesn't block it */
+  text-align: center;
+  padding: 1rem;
+}
+
+.home-banner__text {
+  padding: 1rem;
+  width: 100%;
+  animation: fadeSlideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.home-banner__text h1 {
+  color: var(--dark-grey);
+  text-align: center;
+  font-size: clamp(1.5rem, 6vw, 4rem); /* scales from 1.5rem to 4rem based on viewport */
+}
+
+.home-banner__text p {
+  color: var(--dark-grey);
+  text-align: center;
+  font-size: clamp(0.5rem, 3vw, 1.5rem); /* scales smoothly with screen width */
+}
+
+
+/* Product Banner Animation */
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 1s ease forwards;
+}
+
+
+
+/* Home Intro */ 
+
+.home-intro {
+  background-color: var(--soft-grey);
+  padding: 2rem 0;
+}
+
+
+.home-intro__loop .grid {
+  display: grid;
+
+  /* Responsive columns */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+  gap: 2rem;
+}
+
+.home-intro__preview {
+  background-color: var(--dark-grey);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.4);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  border-radius: 0; /* square style */
+  transition: transform 0.2s ease;
+  animation: fadeSlideUp 0.6s ease forwards;
+  opacity: 0;
+}
+
+.home-intro__preview:hover {
+  transform: translateY(-4px); /* Hover lift effect */
+}
+
+.home-intro__image img {
+  width: 100%;
+  display: block;
+  border-radius: 0;
+}
+
+.home-intro__content h2 {
+  color: black;
+  margin-bottom: 1rem;
+  text-align: left;
+  font-family: var(--sans-serif);
+  font-size: 2rem;
+}
+
+.home-intro__content p {
+  font-size: 0.95rem;
+  color: black;
+  margin-bottom: 1rem;
+  font-family: var(--sans-serif);
+  font-size: 1.15rem;
+}
+
+.home-intro__content .button {
+  font-size: 0.9rem;
+}
+
+.home-intro__content .button:hover {
+  font-size: 0.9rem;
+  color: var(--soft-grey);
+  transform: scale(1.05); /* Slightly enlarge on hover */
+}
+
+
+
+
+/* Footer */
+
+.site-footer {
+  background-color: var(--dark-grey);
+  text-align: center;
+  padding: 2rem 0;
+  font-size: 0.875rem;
+}
+
+.footer-socials a {
+    color: black;
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.footer-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-links div {
+    flex: 1;
+    min-width: 150px;
+}
+
+.footer-links h4 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.footer-links p,
+.footer-links a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+
+/* Mobile */
+@media (max-width: 768px) {
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .footer-socials a {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+  }
+}

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>    
+
+</head>
+
+<main>
+<body class="min-h-full overflow-x-hidden relative">
+
+ <header class="border-b border-b-slate-500">
+        <div class="container mx-auto py-2 px-4 flex justify-between items-center">
+            <a href="#"><img src="images/case-logo-black.svg" width="64" alt="Phone Case Logo"></a>
+            <nav class="absolute top-0 right-0 w-72 bg-blue-400 h-screen translate-x-full transition-all lg:relative lg:bg-opacity-0 lg:h-auto lg:w-auto lg:translate-x-0 z-50 js-menu">
+                <a href="#" class="js-menu-close absolute p-2 top-0 right-0 lg:hidden">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor" class="w-6 h-6 text-white ">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </a>
+                <ul class="text-white lg:text-slate-700 lg:flex">
+                    <li class="py-2 px-4 border-b lg:border-0 hover:underline">Shop</li>
+                    <li class="py-2 px-4 border-b lg:border-0 hover:underline">About</li>
+                    <li class="py-2 px-4 border-b lg:border-0 hover:underline">Contact</li>
+                </ul>
+            </nav>
+            <a href="#" class="js-menu-open lg:hidden">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-10 h-10 text-slate-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </a>
+        </div>
+    </header>
+
+
+    <!-- Product Page Header -->
+    <section class="home-banner">
+            <div class="home-banner__content">
+                <div class="container">
+                    <div class="grid">
+                        <div class="home-banner__text">
+                            <h1>Phone Cases</h1>
+                            <p>Lorem ipsum dolor sit amet, consec tetur adipiscing elit consec tetur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+      <!-- Intr Section -->
+    <section class="home-intro">
+      <div class="container">
+
+
+        <!-- Grid of Blog Cards -->
+        <div class="home-intro__loop">
+          <div class="grid">
+
+            <!-- Card -->
+            <div class="home-intro__intro grid">
+              <div class="home-intro__image">
+                <img src="images/fish-phone-case.jpg" alt="A fish phone case" />
+              </div>
+              <div class="home-intro__content">
+                <h2>Fish Phone Case</h2>
+                <p>This is a phone case with a fish on it</p>
+                <a class="button" href="#" aria-label="something descriptive" Review">View Detail</a>
+              </div>
+            </div>
+
+          </div>
+
+        </section>
+
+    </main>
+   <!-- Footer -->
+<footer>
+        <div class="container footer-content">
+            <div class="footer-left">
+                <div class="footer-logo">
+                    <a href="index.html">
+                        <img src="images/case-logo-black.svg"  alt="Noko Logo">
+                    </a>
+                </div>
+                <div class="footer-socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">Twitter</a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <div>
+                    <h4>Hours</h4>
+                    <p>Mon-Fri: 10am - 5pm</p>
+                    <p>Sat-Sun: Closed</p>
+                </div>
+                <div>
+                    <h4>Contact</h4>
+                    <p>hello@phonecase.ca</p>
+                    <p>778 906 2044</p>
+                    <p>500 Robson St.</p>
+                    <p>Vancouver, BC, V6T 1L9</p>
+                </div>
+                <div>
+                    <h4>Info</h4>
+                    <a href="#">Supply chain</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Shipping & Refund</a>
+                    <a href="#">Terms & Conditions</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    
+</body>
+</html>
